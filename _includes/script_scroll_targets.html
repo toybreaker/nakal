@@ -1,0 +1,38 @@
+<script>
+  // add event listener on load
+  window.addEventListener('load', function() {
+
+    // scroll to top
+    document.querySelector('.js-scroll-to-top').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.bungkus').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('.js-scroll-back-up').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.bungkus').scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+    // scroll into view
+    document.querySelector('.js-scroll-into-fruits').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.fruits').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('.js-scroll-into-spices').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.spices').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('.js-scroll-into-vegetables').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.vegetables').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('.js-scroll-into-about').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.about').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>

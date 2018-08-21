@@ -1,0 +1,16 @@
+<div class="product_page_title fruits">
+  <h1 class="center top_padded" id="fruits">Fruits</h1>
+</div>
+
+<div class="product_grid">
+<!-- fruit-looper -->
+{% for product in site.products %}
+  {% if product.product_group=="fruits" %}
+    {% unless product.publish=="notyet" %}
+
+      {% include product_card.html %}
+
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+</div>

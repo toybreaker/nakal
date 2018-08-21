@@ -1,0 +1,55 @@
+.hero {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hero_image {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  div[data-src] {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    @include media( "screen", ">minWidth") {
+      min-height: calc(100vh - 90px);
+    }
+    @include media( "screen", ">bp1Width") {
+      min-height: calc(100vh - 76px);
+    }
+    @include media( "screen", ">maxWidth") {
+      min-height: calc(100vh - 76px);
+    }
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero_caption {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+
+
+.caption {
+  font-size: 14vw;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: transparentize(white, .5);
+  bottom: 10%;
+  @include media( "screen", ">minWidth") {
+    bottom: 1%;
+  }
+}

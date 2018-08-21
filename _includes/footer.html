@@ -1,0 +1,82 @@
+<footer class="footer group" role="contentinfo">
+
+  <div class="container">
+
+    <!-- <div class="footer_company_name">
+      {{site.title}}
+    </div> -->
+
+    <div class="menu menu_footer">
+
+      <div class="menu_contacts" role="menu">
+
+
+        {% if site.company.address %}
+        <div class="footer_icon address">
+          <a class="menu_item" role="menuitem" href="{% if site.company.maplink %}{{site.company.maplink}}{% else %}#{% endif %}" title="location">
+
+            <span class="address_icon">
+            {% include svg/use.html id="icn--location" class="location" %}
+            </span>
+
+            <div class="address_text">
+
+              {% if site.company.legal_name %}
+                <div class="name">{{site.company.legal_name}}</div>
+              {% else %}
+                <div class="name">{{site.company.name}}</div>
+              {% endif %}
+
+              <div>{{site.company.address}}</div>
+              <div>{{site.company.country}}</div>
+            </div>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if site.company.telephone %}
+        <div class="footer_icon telephone">
+          <a class="menu_item" role="menuitem" href="#" title="telephone">
+            <span>{% include svg/use.html id="icn--localphone" class="localphone" %}</span>
+            <span>{{site.company.telephone}}</span>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if site.company.fax %}
+        <div class="footer_icon fax">
+          <a class="menu_item" role="menuitem" href="#" title="fax">
+            <span>{% include svg/use.html id="icn--fax" class="fax" %}</span>
+            <span>{{site.company.fax}}</span>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if site.company.email %}
+        <div class="footer_icon email">
+          <a class="menu_item" role="menuitem" class="" href="mailto:{{site.company.email}}" title="{{site.company.email}}">
+            <span>
+              {% include svg/use.html id="icn--email" class="email" %}
+            </span>
+            <span>{{site.company.email}}</span>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if site.qr == "show" %}
+        <div class="menu_item footer_icon email" role="menuitem">
+          <span>
+            {% include svg/use.html id="icn--qr" class="qr" %}
+          </span>
+        </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+    <div class="copyright">Copyright © {{ "now" | date: "%Y" }} {{site.company.legal_name}}. All rights reserved. <br class="break_on_phones"> Powered by <a href="https://junglestar.org">Junglestar</a></div>
+
+  </div>
+
+</footer>

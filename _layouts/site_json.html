@@ -1,0 +1,14 @@
+---
+layout: nil
+---
+
+[
+{% for product in site.products %}
+    {
+      "title"    : "{{ product.title }}",
+      "url"     : "{{ product.url }}",
+      "date"     : "{{ product.date | date: "%B %d, %Y" }}",
+      "content"  : "{{ product.content | escape }}"
+    } {% if forloop.last %}{% else %},{% endif %}
+{% endfor %}
+]

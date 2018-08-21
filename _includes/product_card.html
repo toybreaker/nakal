@@ -1,0 +1,71 @@
+<div class="pad {{ product.name | downcase | slugify }}_pad hide" id="{{ product.name | downcase | slugify }}_pad"></div>
+
+<span id="{{ product.name | downcase | slugify }}" class="looper__link card {{ product.product_group }} js-scroll-into-{{ product.name | downcase | slugify }}" title="{{ product.name }}">
+
+  <div class="product_image">
+    <figure class="">
+      <img  class="product_thumb" src="{{ site.baseurl }}/assets/p/products/{{ product.product_group }}/{{ product.name | downcase | slugify }}.jpg" alt="{{ product.name }}" title="{{ product.name }}">
+      {% if product.tag %}
+      <figcaption class="figcaption {{ product.tag | downcase | slugify }}">{{ product.tag }}</figcaption>
+      {% endif %}
+    </figure>
+    <div class="product_group {{ product.product_group | downcase | slugify }}">
+      {{ product.product_group }}
+    </div>
+  </div>
+
+  <div class="product_text">
+    <h1>{{product.name }}</h1>
+    <h3>{{product.subtitle }}</h3>
+    <div id="{{ product.name | downcase | slugify }}_excerpt" class="product_text_content">
+      {{product.content | strip_html | truncatewords: 16}}
+    </div>
+
+    <div id="{{ product.name | downcase | slugify }}_content" class="product_text_content hide">
+      {{product.content}}
+    </div>
+
+    <div id="{{ product.name | downcase | slugify }}_button" class="button_row">
+      <!-- 'learn more' instead of 'view' or others, Apple teaches -->
+      <span class="button">Learn more</span>
+    </div>
+  </div>
+
+  <script>
+    // add event listener on load for smooth scroll
+    window.addEventListener('load', function() {
+
+      // scroll into view
+      document.querySelector('.js-scroll-into-{{ product.name | downcase | slugify }}').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('.{{ product.name | downcase | slugify }}_pad').scrollIntoView({behavior: 'smooth' });
+      });
+    });
+    /* code that SPEAKs: toggle menu */
+    function toggleClass(element, className){
+        if (!element || !className){
+            return;
+        }
+
+        var classString = element.className, nameIndex = classString.indexOf(className);
+        if (nameIndex == -1) {
+            classString += ' ' + className;
+        }
+        else {
+            classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+        }
+        element.className = classString;
+    }
+
+    document.getElementById('{{ product.name | downcase | slugify }}').addEventListener('click', function() {
+      toggleClass(document.getElementById('{{ product.name | downcase | slugify }}'), 'is_big');
+      toggleClass(document.getElementById('{{ product.name | downcase | slugify }}_excerpt'), 'hide');
+      toggleClass(document.getElementById('{{ product.name | downcase | slugify }}_content'), 'hide');
+      toggleClass(document.getElementById('{{ product.name | downcase | slugify }}_button'), 'hide');
+      toggleClass(document.getElementById('{{ product.name | downcase | slugify }}_pad'), 'hide');
+      toggleClass(document.body, 'has_card_big');
+    });
+
+  </script>
+
+</span>

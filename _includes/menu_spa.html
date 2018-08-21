@@ -1,0 +1,13 @@
+{% comment %}
+menu with just 3/4 item for spa
+{% endcomment %}
+
+<nav class="menu menu_header" role="menu">
+
+  {% for item in site.data.menu_spa %}
+    <span class="menu_item js-scroll-into-{{ item.name }}" role="menuitem" title="{{ item.name }}">
+      <span class="page_title">{{ item.name }}</span>
+    </span>
+  {% endfor %}
+
+</nav>
