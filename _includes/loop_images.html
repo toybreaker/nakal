@@ -1,0 +1,7 @@
+{% for image in site.static_files %}
+  {% if image.path contains 'andychan' %}
+    <figure class="slide">
+      <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    </figure>
+  {% endif %}
+{% endfor %}
