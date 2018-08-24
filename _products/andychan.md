@@ -4,6 +4,6 @@ layout: gallery
 subtitle:
 description:
 product_group:
-image: /assets/p/products/andychan/andychan-01.jpg
+image: /assets/p/products/andychan/00.jpg
 
 ---
