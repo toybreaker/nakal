@@ -1,0 +1,30 @@
+.retailers {
+  display: block;
+  padding: $vertical_rhythm 0;
+  width: 100%;
+  background-color: lighten($grey--light, 6);
+  .title {
+    padding-bottom: $vertical_rhythm;
+  }
+  a {
+    border-bottom: 1px solid $grey;
+  }
+}
+
+.retailer {
+  padding-bottom: $vertical_rhythm--small;
+}
+
+.retailer_name,
+.retailer_location,
+.retailer_city,
+.retailer_address,
+.retailer_telephone,
+.retailer_maplink {
+  display: inline-block;
+}
+
+
+.retailer_name {
+  font-weight: 500;
+}

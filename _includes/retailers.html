@@ -1,0 +1,20 @@
+<div class="retailers group" role="contentinfo">
+
+  <div class="container">
+
+    <h2 class="title">{{ site.title}} Retailers</h2>
+
+
+    {% for item in site.data.retailers %}
+    <div class="retailer">
+      <div class="retailer_name">{{ item.name }}</div>,
+      <div class="retailer_location">{{ item.location }}</div>,
+      <div class="retailer_city">{{ item.city }}</div>,
+      <div class="retailer_address">{{ item.address }}</div>,
+      <div class="retailer_telephone">{{ item.telephone }}</div>,
+      <div class="retailer_maplink"><a href="{{ item.maplink }}">map</a></div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>

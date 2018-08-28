@@ -785,6 +785,30 @@ section {
   .pad.hide {
     display: none; }
 
+.retailers {
+  display: block;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: #e8e8e8; }
+  .retailers .title {
+    padding-bottom: 2rem; }
+  .retailers a {
+    border-bottom: 1px solid #737373; }
+
+.retailer {
+  padding-bottom: 1rem; }
+
+.retailer_name,
+.retailer_location,
+.retailer_city,
+.retailer_address,
+.retailer_telephone,
+.retailer_maplink {
+  display: inline-block; }
+
+.retailer_name {
+  font-weight: 500; }
+
 .share_box {
   margin-top: 2rem;
   width: 100%;

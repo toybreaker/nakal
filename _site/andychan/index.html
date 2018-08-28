@@ -459,14 +459,11 @@
 
   <div class="container">
 
-    <!-- <div class="footer_company_name">
-      Nakal
-    </div> -->
+    <h2 class="title">Nakal Headquarter</h2>
 
     <div class="menu menu_footer">
 
       <div class="menu_contacts" role="menu">
-
 
         
         <div class="footer_icon address">
@@ -479,22 +476,23 @@
 
             </span>
 
-            <div class="address_text">
+            <div class="address_text" itemscope itemtype="http://schema.org/Organization">
 
               
-                <div class="name">Cv. Konsep</div>
+                <div class="name" itemprop="name">Cv. Konsep</div>
               
-
-              <div>Jl. Tukad Nyali 18x, Sanur, Bali</div>
-              <div>Indonesia</div>
+              <span itemscope itemtype="http://schema.org/PostalAddress">
+                <div itemprop="streetAddress">Jl. Tukad Nyali 18x, Sanur, Bali</div>
+                <div itemprop="addressLocality">Indonesia</div>
+              </span>
             </div>
           </a>
         </div>
         
 
         
-        <div class="footer_icon telephone">
-          <a class="menu_item" role="menuitem" href="#" title="telephone">
+        <div class="footer_icon telephone" itemprop="telephone">
+          <a class="menu_item" role="menuitem" href="tel:+62 361 271370" title="telephone">
             <span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  class="localphone">
 	<use xlink:href="#icn--localphone"></use>
 </svg>
@@ -515,7 +513,7 @@
 </svg>
 
             </span>
-            <span>info@nakal.co</span>
+            <span itemprop="email">info@nakal.co</span>
           </a>
         </div>
         

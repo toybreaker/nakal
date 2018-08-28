@@ -2,14 +2,11 @@
 
   <div class="container">
 
-    <!-- <div class="footer_company_name">
-      {{site.title}}
-    </div> -->
+    <h2 class="title">{{site.title}} Headquarter</h2>
 
     <div class="menu menu_footer">
 
       <div class="menu_contacts" role="menu">
-
 
         {% if site.company.address %}
         <div class="footer_icon address">
@@ -19,24 +16,25 @@
             {% include svg/use.html id="icn--location" class="location" %}
             </span>
 
-            <div class="address_text">
+            <div class="address_text" itemscope itemtype="http://schema.org/Organization">
 
               {% if site.company.legal_name %}
-                <div class="name">{{site.company.legal_name}}</div>
+                <div class="name" itemprop="name">{{site.company.legal_name}}</div>
               {% else %}
-                <div class="name">{{site.company.name}}</div>
+                <div class="name" itemprop="name">{{site.company.name}}</div>
               {% endif %}
-
-              <div>{{site.company.address}}</div>
-              <div>{{site.company.country}}</div>
+              <span itemscope itemtype="http://schema.org/PostalAddress">
+                <div itemprop="streetAddress">{{site.company.address}}</div>
+                <div itemprop="addressLocality">{{site.company.country}}</div>
+              </span>
             </div>
           </a>
         </div>
         {% endif %}
 
         {% if site.company.telephone %}
-        <div class="footer_icon telephone">
-          <a class="menu_item" role="menuitem" href="#" title="telephone">
+        <div class="footer_icon telephone" itemprop="telephone">
+          <a class="menu_item" role="menuitem" href="tel:{{site.company.telephone}}" title="telephone">
             <span>{% include svg/use.html id="icn--localphone" class="localphone" %}</span>
             <span>{{site.company.telephone}}</span>
           </a>
@@ -44,7 +42,7 @@
         {% endif %}
 
         {% if site.company.fax %}
-        <div class="footer_icon fax">
+        <div class="footer_icon fax" itemprop="fax">
           <a class="menu_item" role="menuitem" href="#" title="fax">
             <span>{% include svg/use.html id="icn--fax" class="fax" %}</span>
             <span>{{site.company.fax}}</span>
@@ -58,7 +56,7 @@
             <span>
               {% include svg/use.html id="icn--email" class="email" %}
             </span>
-            <span>{{site.company.email}}</span>
+            <span itemprop="email">{{site.company.email}}</span>
           </a>
         </div>
         {% endif %}
