@@ -1,6 +1,6 @@
 ---
-name: Nakal for Andy Chan
 layout: gallery
+title: Nakal for Andy Chan
 subtitle:
 description:
 product_group:
