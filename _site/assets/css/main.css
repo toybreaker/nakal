@@ -436,6 +436,11 @@ h3 {
         max-width: 60%;
         margin-left: 20%;
         margin-right: 20%; } }
+  .footer .logo {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2rem; }
   .footer .title {
     font-weight: 600;
     font-size: 1.2rem;

@@ -30,6 +30,13 @@
     }
   }
 
+  .logo {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    margin-bottom: $vertical_rhythm;
+  }
+
   .title {
     font-weight: 600;
     font-size: 1.2rem;
