@@ -414,6 +414,7 @@ h3 {
   width: 100%;
   background-color: #d9d9d9; }
   .footer .container {
+    -webkit-box-shadow: none;
     box-shadow: none;
     display: -webkit-box;
     display: -ms-flexbox;
