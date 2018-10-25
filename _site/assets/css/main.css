@@ -608,51 +608,15 @@ a {
   padding-bottom: 2rem; }
 
 .hero {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0; }
+  position: relative;
+  height: calc(100vh - 95px);
+  overflow: hidden; }
 
 .hero_image {
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
-  .hero_image div[data-src] {
-    width: 100%;
-    min-height: calc(100vh - 90px);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    @media only screen and (min-width: 601px) {
-      .hero_image div[data-src] {
-        min-height: calc(100vh - 90px); } }
-    @media only screen and (min-width: 841px) {
-      .hero_image div[data-src] {
-        min-height: calc(100vh - 76px); } }
-    @media only screen and (min-width: 1261px) {
-      .hero_image div[data-src] {
-        min-height: calc(100vh - 76px); } }
-  .hero_image .hero_caption {
-    position: absolute;
-    margin: 0;
-    left: 0;
-    bottom: 0; }
-
-.caption {
-  font-size: 14vw;
-  font-weight: 700;
+  width: auto;
   position: absolute;
-  text-align: center;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.5);
-  bottom: 10%; }
-  @media only screen and (min-width: 601px) {
-    .caption {
-      bottom: 1%; } }
+  left: 50%;
+  transform: translate(-50%, 0); }
 
 figure {
   position: relative;

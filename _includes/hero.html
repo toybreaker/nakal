@@ -1,28 +1,14 @@
-
 <div class="hero">
-  <div class="hero_image">
-    <div class="" data-src="{{ site.baseurl }}{{ page.image }}">
-      <div class="caption" data-caption="{{image.caption}}">
-      </div>
-    </div>
-  </div>
-</div>
 
+  {% comment %}
+  assign the page image and split at the extension dot
+  {% endcomment %}
+  {% assign f = page.image | split: '.' %}
+  <img class="hero_image" src="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }}"
+       srcset="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }} 640w,
+               {{ f[0] | relative_url }}{{ include.name }}-880.{{ f[1] }} 880w,
+               {{ f[0] | relative_url }}{{ include.name }}-1024.{{ f[1] }} 1024w,
+               {{ f[0] | relative_url }}{{ include.name }}-1920.{{ f[1] }} 1920w"
+       sizes="100vw" alt="{{ page.name }} - {{ page.subtitle }}" />
 
-
-<script>
-  //take care of bg image
-  var list = document.querySelectorAll("div[data-src]");
-
-    for (var i = 0; i < list.length; i++) {
-    var url = list[i].getAttribute('data-src');
-    list[i].style.backgroundImage="url('" + url + "')";
-  }
-  //take care of image caption
-  var list = document.querySelectorAll("div[data-caption]");
-
-    for (var i = 0; i < list.length; i++) {
-    var string = list[i].getAttribute('data-caption');
-    list[i].innerHTML+= string ;
-  }
-</script>
+ </div>

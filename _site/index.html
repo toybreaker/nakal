@@ -6,13 +6,12 @@
 
 
 
-      _ _    _ _   _  _____ _      ______  _____ _______       _____
-     | | |  | | \ | |/ ____| |    |  ____|/ ____|__   __|/\   |  __ \
-     | | |  | |  \| | |  __| |    | |__  | (___    | |  /  \  | |__) |
- _   | | |  | | . ` | | |_ | |    |  __|  \___ \   | | / /\ \ |  _  /
-| |__| | |__| | |\  | |__| | |____| |____ ____) |  | |/ ____ \| | \ \
- \____/ \____/|_| \_|\_____|______|______|_____/   |_/_/    \_\_|  \_\
-
+      _                   _           _
+     | |_   _ _ __   __ _| | ___  ___| |_ __ _ _ __
+  _  | | | | | '_ \ / _` | |/ _ \/ __| __/ _` | '__|
+ | |_| | |_| | | | | (_| | |  __/\__ \ || (_| | |
+  \___/ \__,_|_| |_|\__, |_|\___||___/\__\__,_|_|
+                    |___/
 
  site     : https://junglestar.org
  email    : info@junglestar.org
@@ -42,7 +41,7 @@
   <meta name="google-site-verification" content="google32e66f1a5601ec40" />
   
 
-  <meta name="version" content="0.0.3">
+  <meta name="version" content="0.0.4">
 
   <!-- Begin favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png?v=181011">
@@ -270,34 +269,18 @@
 
     <div class="bungkus group" role="main">
 
-      
-<div class="hero">
-  <div class="hero_image">
-    <div class="" data-src="/assets/p/products/shirts/shirt-01.jpg">
-      <div class="caption" data-caption="">
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="hero">
 
+  
+  
+  <img class="hero_image" src="/assets/p/products/shirts/shirt-01-640.jpg"
+       srcset="/assets/p/products/shirts/shirt-01-640.jpg 640w,
+               /assets/p/products/shirts/shirt-01-880.jpg 880w,
+               /assets/p/products/shirts/shirt-01-1024.jpg 1024w,
+               /assets/p/products/shirts/shirt-01-1920.jpg 1920w"
+       sizes="100vw" alt="index.md - " />
 
-
-<script>
-  //take care of bg image
-  var list = document.querySelectorAll("div[data-src]");
-
-    for (var i = 0; i < list.length; i++) {
-    var url = list[i].getAttribute('data-src');
-    list[i].style.backgroundImage="url('" + url + "')";
-  }
-  //take care of image caption
-  var list = document.querySelectorAll("div[data-caption]");
-
-    for (var i = 0; i < list.length; i++) {
-    var string = list[i].getAttribute('data-caption');
-    list[i].innerHTML+= string ;
-  }
-</script>
+ </div>
 
 
     </div>
