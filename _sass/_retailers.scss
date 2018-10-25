@@ -7,12 +7,20 @@
     padding-bottom: $vertical_rhythm;
   }
   a {
-    border-bottom: 1px solid $grey;
+    //border-bottom: 1px solid $grey;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
   }
 }
 
-.retailer {
+.retailer_maplink {
   padding-bottom: $vertical_rhythm--small;
+  display: flex;
+  align-items: center;
 }
 
 .retailer_name,
@@ -20,7 +28,7 @@
 .retailer_city,
 .retailer_address,
 .retailer_telephone,
-.retailer_maplink {
+.retailer_map_icon {
   display: inline-block;
 }
 

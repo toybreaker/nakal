@@ -762,18 +762,22 @@ section {
   background-color: #e8e8e8; }
   .retailers .title {
     padding-bottom: 2rem; }
-  .retailers a {
-    border-bottom: 1px solid #737373; }
+  .retailers svg {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px; }
 
-.retailer {
-  padding-bottom: 1rem; }
+.retailer_maplink {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center; }
 
 .retailer_name,
 .retailer_location,
 .retailer_city,
 .retailer_address,
 .retailer_telephone,
-.retailer_maplink {
+.retailer_map_icon {
   display: inline-block; }
 
 .retailer_name {

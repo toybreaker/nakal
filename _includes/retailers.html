@@ -7,12 +7,17 @@
 
     {% for item in site.data.retailers %}
     <div class="retailer">
-      <div class="retailer_name">{{ item.name }}</div>,
-      <div class="retailer_location">{{ item.location }}</div>,
-      <div class="retailer_city">{{ item.city }}</div>,
-      <div class="retailer_address">{{ item.address }}</div>,
-      <div class="retailer_telephone">{{ item.telephone }}</div>,
-      <div class="retailer_maplink"><a href="{{ item.maplink }}">map</a></div>
+      <a class="retailer_maplink" href="{{ item.maplink }}">
+        <div class="retailer_map_icon">
+          {% include svg/use.html id="icn--location" class="location" %}
+        </div>
+        <div class="retailer_data">
+          <div class="retailer_name">{{ item.name }}</div>,
+          <div class="retailer_location">{{ item.location }}</div>,
+          <div class="retailer_city">{{ item.city }}</div>,
+          <div class="retailer_address">{{ item.address }}</div>
+        </div>
+      </a>
     </div>
     {% endfor %}
   </div>
